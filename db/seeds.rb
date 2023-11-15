@@ -18,7 +18,7 @@ puts "all flats destroyed"
     description: Faker::Quote.yoda,
     price_per_night: (50..450).to_a.sample,
     number_of_guest: (2..6).to_a.sample,
-    img_url: "https://source.unsplash.com/collection/#{rand(5000)}/480x480"
+    img_url: "https://source.unsplash.com/collection/#{rand(700)}/1280x720"
   )
   puts "#{flat.name} created"
 end

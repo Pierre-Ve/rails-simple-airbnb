@@ -1,5 +1,5 @@
 class FlatsController < ApplicationController
-  before_action :set_flat, only: %i[destroy]
+  before_action :set_flat, only: %i[destroy edit update show] 
 
   def index
     @flats = Flat.all
@@ -7,6 +7,9 @@ class FlatsController < ApplicationController
 
   def new
     @flat = Flat.new
+  end
+
+  def show
   end
 
   def create
@@ -21,6 +24,14 @@ class FlatsController < ApplicationController
   def destroy
     @flat.destroy
     redirect_to flats_path, notice: "the flat was deleted"
+  end
+
+  def edit
+  end
+
+  def update
+    @flat.update(flat_params)
+    redirect_to flats_path
   end
 
   private
