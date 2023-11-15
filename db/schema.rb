@@ -17,6 +17,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_15_131059) do
     t.text "description"
     t.integer "price_per_night"
     t.integer "number_of_guest"
+    t.string "img_url", default: "https://source.unsplash.com/random"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

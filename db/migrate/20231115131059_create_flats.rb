@@ -6,6 +6,7 @@ class CreateFlats < ActiveRecord::Migration[7.1]
       t.text :description
       t.integer :price_per_night
       t.integer :number_of_guest
+      t.string :img_url, :default => 'https://source.unsplash.com/random'
 
       t.timestamps
     end
